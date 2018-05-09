@@ -3,6 +3,7 @@ spring:
   devtools:
     restart:
       enabled: true
+      additional-paths: src/main/java/**
 #  thymeleaf:
 #    cache: false
 #    enable-spring-el-compiler: true
