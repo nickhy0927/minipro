@@ -1,0 +1,30 @@
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+#  thymeleaf:
+#    cache: false
+#    enable-spring-el-compiler: true
+#    mode: HTML5
+#    servlet:
+#      content-type: text/html
+#    suffix: .html
+#    prefix: classpath:/templates/
+
+  freemarker:
+    allow-request-override: true
+    request-context-attribute: req
+    suffix: .ftl #后缀名
+    content-type: text/html
+    cache: false
+    template-loader-path: classpath:/templates/ #模板加载路径
+    charset: utf-8
+    settings:
+      number_format: '0.##' #数字格式化，无小数点
+
+
+server:
+  port: 3000
+  servlet:
+    context-path: /minipro
