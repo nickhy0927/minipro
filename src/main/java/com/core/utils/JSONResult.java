@@ -1,4 +1,4 @@
-package com.iss.core.utils;
+package com.core.utils;
 
 public class JSONResult {
 
