@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.core.utils.MyMapper"/>
+        </plugin>
+        <!--数据库链接地址账号密码-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/minipro"
+                        userId="root" password="root">
+        </jdbcConnection>
+        <!--生成Model类存放位置-->
+        <javaModelGenerator targetPackage="com.iss.core.platform.user.pojo" targetProject="src/main/java" />
+        <!--生成映射文件存放位置-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
+        <!--生成Dao类存放位置 ANNOTATEDMAPPER-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.iss.core.platform.user.dao" targetProject="src/main/java" />
+        <!--生成对应表及类名-->
+        <table tableName="sys_role" domainObjectName="Role">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
