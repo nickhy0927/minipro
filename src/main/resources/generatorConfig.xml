@@ -21,13 +21,16 @@
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
         <!--生成Dao类存放位置 ANNOTATEDMAPPER-->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.iss.platform.user.mapper" targetProject="src/main/java" />
+        <!-- <javaServiceGenerator targetPackage="com.iss.platform.user.service" targetProject="src/main/java" /> -->
         <!--生成对应表及类名-->
-        <table tableName="t_p_user" domainObjectName="User">
-            <!--mysql 配置-->
+        <!--mysql 配置-->
+        <!-- <table tableName="t_p_user" domainObjectName="User">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
         <table tableName="t_p_role" domainObjectName="Role">
-            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table> -->
+        <table tableName="t_p_user" domainObjectName="User">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>

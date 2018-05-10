@@ -11,8 +11,13 @@ public class RoleService {
 
 	@Autowired
 	private RoleMapper roleMapper;
-	
+
 	public int insert(Role role) {
 		return roleMapper.insert(role);
+	}
+
+	public long queryCount() {
+		int size = roleMapper.selectAll().size();
+		return size;
 	}
 }
