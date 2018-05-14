@@ -11,9 +11,26 @@
 		<result column="update_time" jdbcType="DATE" property="updateTime" />
 		<result column="delete_time" jdbcType="DATE" property="deleteTime" />
 	</resultMap>
-
+	<update id="update" parameterType="com.iss.platform.role.pojo.Role">
+		update t_p_role
+		<set>
+			<if test="id!=null">id=#{id},</if>
+			<if test="name!=null">name=#{name},</if>
+			<if test="p_id!=null">p_id=#{p_id},</if>
+			<if test="status!=null">status=#{status},</if>
+			<if test="remark!=null">remark=#{remark},</if>
+			<if test="create_time!=null">create_time=#{create_time},</if>
+			<if test="update_time!=null">update_time=#{update_time},</if>
+			<if test="delete_time!=null">delete_time=#{delete_time},</if>
+		</set>
+	</update>
 	<select id="queryRoleByName" resultType="com.iss.platform.role.pojo.Role"
 		parameterType="String">
 		select * from t_p_role t where t.name = #{name}
 	</select>
+	<select id="queryRoleById" resultType="com.iss.platform.role.pojo.Role"
+		parameterType="String">
+		select * from t_p_role t where t.id = #{id}
+	</select>
+
 </mapper>
