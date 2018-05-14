@@ -16,4 +16,8 @@
 		parameterType="String">
 		select * from t_p_role t where t.name = #{name}
 	</select>
+	<select id="queryRoleById" resultType="com.iss.platform.role.pojo.Role"
+		parameterType="String">
+		select * from t_p_role t where t.id = #{id}
+	</select>
 </mapper>

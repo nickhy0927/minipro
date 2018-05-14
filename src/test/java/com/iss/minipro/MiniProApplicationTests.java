@@ -1,11 +1,14 @@
 package com.iss.minipro;
 
+import java.util.Date;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.core.utils.IdWorker;
 import com.iss.platform.role.pojo.Role;
 import com.iss.platform.role.service.RoleService;
 
@@ -25,6 +28,32 @@ public class MiniProApplicationTests {
 	
 	@Test
 	public void queryRoleId() {
+		
+	}
+	@Test
+	public void insert() {
+		Role role = new Role();
+		String id = IdWorker.getSeqId();
+		role.setId(IdWorker.getSeqId());
+		role.setName("abc");
+		int i = roleService.insert(role);
+		System.out.println(i + "--->" + id);
+		
+	}
+	@Test
+	public void update() {
+		Role role = new Role();
+		String id = "445732083092946944";
+		Role role2 = roleService.queryRoleById(id);
+		System.out.println(role2);
+		role.setId(id);
+		role.setUpdateTime(new Date());
+		int update = roleService.update(role);
+		if (update < 1) {
+			System.out.println("更新失败了...");
+		}
+		Role role3 = roleService.queryRoleById(id);
+		System.out.println(role3);
 	}
 	
 	@Test
