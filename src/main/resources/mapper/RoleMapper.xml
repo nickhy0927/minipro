@@ -32,5 +32,4 @@
 		parameterType="String">
 		select * from t_p_role t where t.id = #{id}
 	</select>
-
 </mapper>
