@@ -39,9 +39,9 @@
         </javaServiceGenerator> --> 
         <!--生成对应表及类名-->
         <!--mysql 配置-->
-        <table tableName="t_p_user" domainObjectName="User">
+       <!--  <table tableName="t_p_user" domainObjectName="User">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
+        </table> -->
         <!-- <table tableName="t_p_role" domainObjectName="Role">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table> -->

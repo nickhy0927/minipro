@@ -1,4 +1,4 @@
-package com.iss.platform.user.pojo;
+package com.iss.platform.menu.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
