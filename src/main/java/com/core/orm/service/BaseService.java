@@ -10,6 +10,7 @@ import com.core.orm.mapper.BaseMapper;
 import com.core.utils.PageInfo;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.iss.platform.role.pojo.Role;
 
 public class BaseService<T, ID extends Serializable> {
 
