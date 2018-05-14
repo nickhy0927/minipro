@@ -1,13 +1,12 @@
 package com.iss.minipro;
 
-import java.util.Map;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.iss.platform.role.pojo.Role;
 import com.iss.platform.role.service.RoleService;
 
 import tk.mybatis.spring.annotation.MapperScan;
@@ -22,20 +21,18 @@ public class MiniProApplicationTests {
 	
 	@Test
 	public void contextLoads() {
-		long count = roleService.queryCount();
-		System.out.println("总记录数是：" + count);
 	}
 	
 	@Test
 	public void queryRoleId() {
-		Map<String, Object> map = roleService.queryRoleId("444250892179341312");
-		System.out.println("查询的数据为：" + map.toString());
 	}
 	
 	@Test
 	public void queryRoleByName() {
-		Map<String, Object> map = roleService.queryRoleByName("管理员444250892221284352");
-		System.out.println("查询的数据为：" + map.toString());
+		Role role = roleService.queryRoleByName("管理员444250892221284352");
+		System.out.println(role);
+		
+		
 	}
 	
 

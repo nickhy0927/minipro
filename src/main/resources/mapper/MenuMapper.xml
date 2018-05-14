@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.iss.platform.menu.mapper.MenuMapper">
+<mapper namespace="com.iss.platform.menu.dao.MenuMapper">
 	<resultMap id="BaseResultMap" type="com.iss.platform.menu.pojo.Menu">
-		<!-- WARNING - @mbg.generated -->
 		<result column="id" jdbcType="VARCHAR" property="id" />
 		<result column="name" jdbcType="VARCHAR" property="name" />
 		<result column="url" jdbcType="VARCHAR" property="url" />

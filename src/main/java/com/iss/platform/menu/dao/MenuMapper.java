@@ -1,4 +1,4 @@
-package com.iss.platform.menu.mapper;
+package com.iss.platform.menu.dao;
 
 import com.core.utils.MyMapper;
 import com.iss.platform.menu.pojo.Menu;

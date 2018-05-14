@@ -1,4 +1,4 @@
-package com.iss.platform.user.mapper;
+package com.iss.platform.user.dao;
 
 import com.core.utils.MyMapper;
 import com.iss.platform.user.pojo.User;
