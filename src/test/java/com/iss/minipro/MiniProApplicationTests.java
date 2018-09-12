@@ -17,12 +17,14 @@ public class MiniProApplicationTests {
 
 	@Autowired
 	private UserMapper userMapper;
-	
-	@Test
 	public void contextLoads() {
 		System.out.println(userMapper);
 		User user = userMapper.login("zhangsan");
 		System.out.println(user.getRealName());
 	}
-
+	
+	@Test
+	public void queryRoleId() {
+		
+	}
 }
