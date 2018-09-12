@@ -22,4 +22,10 @@ public class IndexController {
 		model.addAttribute("users", users);
 		return "index";
 	}
+	@RequestMapping(value = "/login.do")
+	public String login(Model model) {
+		List<User> users = userService.queryPageByMap();
+		model.addAttribute("users", users);
+		return "login";
+	}
 }
