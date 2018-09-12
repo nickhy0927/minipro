@@ -7,9 +7,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "com.iss")
-@MapperScan("com.iss.core.platform.user.dao")
+@MapperScan("com.iss.module.**.mapper")
 public class MiniProApplication {
-
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MiniProApplication.class, args);
 	}

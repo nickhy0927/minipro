@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<div th:id="template">
-			<div th:each="user : ${user}">
+			<div th:each="user : ${users}">
 				<div th:text="${user.loginName}"></div>
 			</div>
 		</div>
