@@ -3,62 +3,67 @@ package com.iss.module.platform.user.pojo;
 import java.util.Date;
 
 public class User {
-	
-	private String id;
+
+    protected String id;
 	/**
      * 真实姓名
      */
-    private String realName;
+    protected String realName;
+
+    /**
+     * 登陆密码
+     */
+    protected String password;
 
     /**
      * 登录账号
      */
-    private String loginName;
+    protected String loginName;
 
     /**
      * 是否锁定 1 锁定 0 未锁定
      */
-    private Integer locked;
+    protected Integer locked;
 
     /**
      * 是否启用 1 启用 0 停用
      */
-    private Integer enable;
+    protected Integer enable;
 
     /**
      * 电子邮箱
      */
-    private String email;
+    protected String email;
 
     /**
      * 电话号码
      */
-    private String mobile;
+    protected String mobile;
 
     /**
      * 信息备注
      */
-    private String remark;
+    protected String remark;
 
     /**
      * 用户职位
      */
-    private String position;
+    protected String position;
 
     /**
      * 最后一次登录时间
      */
-    private Date lastLoginTime;
+    protected Date lastLoginTime;
 
     /**
      * 登录次数
      */
-    private String loginCount;
+    protected String loginCount;
 
     /**
      * 登录IP
      */
-    private String lastLoginIp;
+    protected String lastLoginIp;
 
     public String getId() {
 		return id;
@@ -210,4 +215,11 @@ public class User {
         this.lastLoginTime = lastLoginTime;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
